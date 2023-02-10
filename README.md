@@ -27,4 +27,3 @@ The user interface can be accessed at `http://localhost:3000`.\
 ```
 
 ![](sc.png)
-#blockly
