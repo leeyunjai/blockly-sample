@@ -21,21 +21,21 @@ let workspace = Blockly.inject("blocklyDiv", {
   },
 });
 
-var socket = io();
-socket.on("generatedCode", function(code){
-  console.log("Generated code:", code);
-});
+// var socket = io();
+// socket.on("generatedCode", function(code){
+//   console.log("Generated code:", code);
+// });
 
 document.getElementById("codebt").addEventListener("click", function() {
   let code = Blockly.Python.workspaceToCode(workspace);
   document.getElementById('res').value = code;
-  socket.emit("generateCode", code);
+  // socket.emit("generateCode", code);
 });
 
 document.getElementById("jsonbt").addEventListener("click", function() {
   let code = JSON.stringify(Blockly.serialization.workspaces.save(workspace));
   document.getElementById('res').value = code;
-  socket.emit("generateCode", code);
+  // socket.emit("generateCode", code);
 });
 
 document.getElementById("loadbt").addEventListener("click", function() {
